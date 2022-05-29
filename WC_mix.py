@@ -217,7 +217,7 @@ error_org1=str(error_org)+"%"
 
 fig1,ax1=plt.subplots()
 ax1.plot(conc_AcAorg,Da_orgexp*(1e5),'o'),
-ax1.plot(conc_AcAorg,Da_org*(1e5),'*')
+ax1.plot(conc_AcAorg,Da_org*(1e5),'-')
 ax1.legend(['GROMACS', method], bbox_to_anchor=(1.8, 1), ncol=2)
 plt.xlabel("Mole fraction of AcA in organic phase")
 plt.ylabel("Diffusivity in orgnic phase ($10^{-5} cm^2 s^{-1}$)")
@@ -226,7 +226,7 @@ plt.title('Diffusivity vs mol fraction of acetic acid in organic phase',pad=2)
 
 fig2,ax2=plt.subplots()
 ax2.plot(conc_AcAaq,Da_aqexp*(1e5),'o'),
-ax2.plot(conc_AcAaq,Da_aq*(1e5),'*')
+ax2.plot(conc_AcAaq,Da_aq*(1e5),'-')
 ax2.legend(['GROMACS', method], bbox_to_anchor=(1.8, 1), ncol=2)
 plt.xlabel("Mole fraction of AcA in aqueous phase")
 plt.ylabel("Diffusivity in aqueous phase ($10^{-5} cm^2 s^{-1}$)")
