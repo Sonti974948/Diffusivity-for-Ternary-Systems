@@ -242,6 +242,15 @@ with st.expander(label="Raw data of diffusivity in organic phase (error in %)"):
 
 st.pyplot(fig2)
 
+fn = 'aqueous.png'
+plt.savefig(fn)
+with open(fn, "rb") as img:
+    btn = st.download_button(
+        label="Download as image",
+        data=img,
+        file_name=fn,
+        mime="image/png"
+    )
 
 with st.expander(label="Raw data of diffusivity in aqueous phase (error in %)"):
     for i in range(5):
