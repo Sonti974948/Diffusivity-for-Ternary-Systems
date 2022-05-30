@@ -237,7 +237,7 @@ with open(fn1, "rb") as img:
     btn = st.download_button(
         label="Download as image",
         data=img,
-        file_name=fn,
+        file_name=fn1,
         mime="image/png"
     )
 with st.expander(label="Raw data of diffusivity in organic phase (error in %)"):
@@ -256,7 +256,7 @@ with open(fn2, "rb") as img:
     btn = st.download_button(
         label="Download as image",
         data=img,
-        file_name=fn,
+        file_name=fn2,
         mime="image/png"
     )
 
