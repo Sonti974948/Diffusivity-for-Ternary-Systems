@@ -231,7 +231,15 @@ plt.ylabel("Diffusivity in aqueous phase ($10^{-5} cm^2 s^{-1}$)")
 plt.title('Diffusivity vs mol fraction of acetic acid in aqueous phase',pad=2)
 
 st.pyplot(fig1)
-
+fn1 = 'organic.png'
+plt.savefig(fn1,bbox_inches='tight')
+with open(fn1, "rb") as img:
+    btn = st.download_button(
+        label="Download as image",
+        data=img,
+        file_name=fn,
+        mime="image/png"
+    )
 with st.expander(label="Raw data of diffusivity in organic phase (error in %)"):
     for i in range(5):
         cols=st.columns(4)
@@ -242,9 +250,9 @@ with st.expander(label="Raw data of diffusivity in organic phase (error in %)"):
 
 st.pyplot(fig2)
 
-fn = 'aqueous.png'
-plt.savefig(fn,bbox_inches='tight')
-with open(fn, "rb") as img:
+fn2 = 'aqueous.png'
+plt.savefig(fn2,bbox_inches='tight')
+with open(fn2, "rb") as img:
     btn = st.download_button(
         label="Download as image",
         data=img,
